@@ -20,11 +20,11 @@ export async function predict(file) {
 
 
 export async function loadModel() {
+    tf.setBackend('cpu');
     const model = await tf.loadLayersModel('model/model.json');
     model.summary();
     cachedModel.model = model;
     cachedModel.loaded = true;
-    console.log("active");
     document.querySelector('.loading').style.display = 'none';
 
 }
