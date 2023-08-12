@@ -24,5 +24,7 @@ export async function loadModel() {
     model.summary();
     cachedModel.model = model;
     cachedModel.loaded = true;
+    console.log("active");
+    document.querySelector('.loading').style.display = 'none';
 
 }

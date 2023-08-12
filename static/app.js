@@ -2,7 +2,7 @@ import { predict, loadModel } from "./model.js";
 
 
 
-setTimeout(loadModel().then(document.querySelector('.loading').style.display = 'none'), 2000);
+loadModel();
 
 
 var image_container = document.getElementById("input_img");
